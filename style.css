@@ -40,4 +40,27 @@ body {
     font-family: 'Outfit', sans-serif;
     font-size: 16px;
     color: var(--dark-charcoal);
+    background-color: var(--eggshell);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.main-card{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+    max-width: 50rem;
+}
+
+.omelette{
+    text-align: center;
+}
+
+.card-picture{
+    display: inline-block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
