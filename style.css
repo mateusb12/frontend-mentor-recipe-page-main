@@ -122,21 +122,28 @@ hr.solid {
     margin-right: 3rem;
 }
 
-.nutrition-div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.nutrition-table {
+    width: 100%;
     margin-left: -2rem !important;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-table {
-    width: 50%;
-    border-collapse: collapse;
-    margin-bottom: 0;
+.nutrition-item {
+    display: flex; /* Makes child elements flex items */
+    justify-content: space-between; /* Separates the label and the amount */
+    width: 50%; /* Adjusts the width of each item to not span the full container width */
+    margin-bottom: 10px; /* Adds some space between items */
 }
 
-td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: left;
+.nutrition-item p:first-child {
+    margin: 0; /* Removes default paragraph margin */
+    flex: 0 1 auto;
+}
+
+.nutrition-item p:last-child {
+    flex: 1 1 auto; /* Grow to fill remaining space, allow shrink, and base width on content */
+    text-align: right; /* Aligns the amount to the right */
 }
