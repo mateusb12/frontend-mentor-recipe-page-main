@@ -76,6 +76,10 @@ body {
     border-radius: 8px;
 }
 
+.preparation-card ul li::marker{
+    color: var(--dark-raspberry);
+}
+
 ul{
     margin: 0;
     padding-bottom: 1rem;
@@ -84,6 +88,19 @@ ul{
 ul li{
     padding-bottom: .7rem;
     position: relative;
+}
+
+ul li::marker{
+    color: var(--nutmeg);
+}
+
+ol li{
+    padding-left: 1rem;
+}
+
+ol li::marker{
+    color: var(--nutmeg);
+    font-weight: bold;
 }
 
 .preparation-card h3{
@@ -95,4 +112,11 @@ ul li{
 
 h2{
     color: var(--nutmeg);
+}
+
+hr.solid {
+    border: none;
+    border-top: 2px solid #ccc; /* Customize the color and thickness as needed */
+    padding-left: 1rem;
+    margin-right: 3rem;
 }
