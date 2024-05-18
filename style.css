@@ -146,7 +146,7 @@ hr.table-line {
 }
 
 .nutrition-title {
-    flex: 0 0 20rem;
+    flex-basis: 20rem;
     padding-left: 4rem;
 }
 
