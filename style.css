@@ -1,4 +1,5 @@
 :root {
+    /* Color Palette */
     --nutmeg: hsl(14, 45%, 36%);
     --dark-raspberry: hsl(332, 51%, 32%);
     --white: hsl(0, 0%, 100%);
@@ -7,7 +8,9 @@
     --lightgrey: hsl(30, 18%, 87%);
     --wenge-brown: hsl(30, 10%, 34%);
     --dark-charcoal: hsl(24, 5%, 18%);
-    --card-margin: 1em;
+
+    /* Spacing */
+    --mobile-size: 768px;
 }
 
 @font-face {
@@ -32,6 +35,11 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+        margin: 0;
+    }
 }
 
 .recipe {
@@ -40,15 +48,30 @@ body {
     background-color: var(--white);
     border-radius: 1rem;
     max-width: 44rem;
+
+    @media (max-width: 768px) {
+        margin: 0;
+        border-radius: 0;
+    }
 }
 
 .recipe-content {
     padding-left: 2rem;
+
+    @media (max-width: 768px) {
+        padding-left: 1.9rem;
+        padding-right: 1.9rem;
+    }
 }
 
 .recipe-card {
     text-align: center;
     padding-top: 2.1rem;
+
+    @media (max-width: 768px) {
+        padding: 0;
+        margin: 0;
+    }
 }
 
 .card-picture {
@@ -57,6 +80,11 @@ body {
     margin-left: auto;
     margin-right: auto;
     border-radius: 15px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        border-radius: 0;
+    }
 }
 
 .recipe-preparation-time {
@@ -85,6 +113,10 @@ ul li::marker {
 
 ol li {
     padding-left: 1rem;
+
+    @media (max-width: 768px) {
+        padding-left: 0;
+    }
 }
 
 ol li::marker {
@@ -125,6 +157,10 @@ hr.table-line {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 768px) {
+        margin-left: 0 !important;
+    }
 }
 
 .nutrition-item {
@@ -136,6 +172,11 @@ hr.table-line {
 .nutrition-title {
     flex-basis: 20rem;
     padding-left: 4rem;
+
+    @media (max-width: 768px) {
+        flex-basis: 8rem;
+        padding-left: .8rem;
+    }
 }
 
 .nutrition-amount {
@@ -143,31 +184,3 @@ hr.table-line {
     font-weight: bold;
 }
 
-@media (max-width: 768px) {
-    body {
-        font-size: 16px;
-        margin: 0;
-    }
-    .recipe {
-        margin: 0;
-        border-radius: 0;
-    }
-    .recipe-card{
-        padding: 0;
-    }
-    .card-picture{
-        width: 100%;
-        border-radius: 0;
-    }
-    .recipe-content{
-        padding-left: 1.9rem;
-        padding-right: 1.9rem;
-    }
-    ol li{
-        margin-bottom: .85rem;
-    }
-    .nutrition-title {
-        flex-basis: 6rem;
-        padding-left: 4rem;
-    }
-}
