@@ -66,6 +66,7 @@ body {
 
 .recipe-card {
     text-align: center;
+    margin: 0;
     padding-top: 2.1rem;
 
     @media (max-width: 768px) {
