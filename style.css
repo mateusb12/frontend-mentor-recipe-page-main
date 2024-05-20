@@ -24,18 +24,6 @@
     font-style: normal;
 }
 
-@media (max-width: 375px) {
-    body {
-        font-size: 14px;
-    }
-}
-
-@media (min-width: 1440px) {
-    body {
-        font-size: 18px;
-    }
-}
-
 body {
     font-family: 'Outfit', sans-serif;
     font-size: 16px;
@@ -153,4 +141,33 @@ hr.table-line {
 .nutrition-amount {
     color: var(--nutmeg);
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        margin: 0;
+    }
+    .main-card{
+        margin: 0;
+        border-radius: 0;
+    }
+    .omelette{
+        padding: 0;
+    }
+    .card-picture{
+        width: 100%;
+        border-radius: 0;
+    }
+    .card-content{
+        padding-left: 1.9rem;
+        padding-right: 1.9rem;
+    }
+    ol li{
+        margin-bottom: .85rem;
+    }
+    .nutrition-title {
+        flex-basis: 6rem;
+        padding-left: 4rem;
+    }
 }
